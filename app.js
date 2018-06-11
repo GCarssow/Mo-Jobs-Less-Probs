@@ -8,7 +8,7 @@ const cors = require('cors')
 const morgan = require("morgan");
 const app = express();
 
-const company = require("./routes/companyroutes.js");
+const tech = require("./routes/tech_routes.js");
 // const cart = require("./routes/cartroutes.js");
 // const paymentApi = require("./routes/striperoutes")
 // const reviews = require("./routes/reviewsroutes")
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors({origin: true, credentials: true}))
 
-app.use("/company", company);
+app.use("/tech", tech);
 // app.use("/cart", cart);
 // app.use("/stripe", paymentApi)
 // app.use("/reviews", reviews)
