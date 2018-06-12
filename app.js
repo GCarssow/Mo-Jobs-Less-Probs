@@ -1,5 +1,4 @@
 const express = require("express");
-//body Parser parses allows server to interpret requests that have bodies post/put - come with a body
 const bodyParser = require("body-parser");
 const cors = require('cors')
 
@@ -8,7 +7,9 @@ const cors = require('cors')
 const morgan = require("morgan");
 const app = express();
 
-const tech = require("./routes/tech_routes.js");
+const company = require("./routes/companyroutes");
+const contact = require("./routes/contactroutes");
+
 // const cart = require("./routes/cartroutes.js");
 // const paymentApi = require("./routes/striperoutes")
 // const reviews = require("./routes/reviewsroutes")
@@ -22,8 +23,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors({origin: true, credentials: true}))
 
-app.use("/tech", tech);
-// app.use("/cart", cart);
+app.use("/company", company);
+app.use("/contact", contact);
 // app.use("/stripe", paymentApi)
 // app.use("/reviews", reviews)
 
