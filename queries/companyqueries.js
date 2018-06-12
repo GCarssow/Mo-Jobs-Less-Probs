@@ -10,7 +10,7 @@ module.exports = {
             // .returning("*")
             // .then(record => record[0])
     },
-    update(id, concert) {
+    update(id, company) {
         return database('company_tb').where('id', id).update(company, '*')
     },
     delete(id) {
