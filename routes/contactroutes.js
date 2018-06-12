@@ -19,7 +19,7 @@ router.get("/:id", (request, response) => {
 router.delete('/:id', (request, response) => {
     queries.delete(request.params.id).then(() => {
         queries.list()
-        .then(contact => response.json(contact))
+        .then(contact => response.json({contact}))
     })
 })
 
@@ -29,7 +29,7 @@ router.post('/', (request, response, next) => {
 })
 
 // router.put('/:id', (request, response) => {
-//     queries.update(request.params.id)
+//     queries.update(request.params.id).then()
 // })
 
 module.exports = router;

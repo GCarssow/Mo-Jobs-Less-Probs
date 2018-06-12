@@ -19,7 +19,7 @@ router.get("/:id", (request, response) => {
 router.delete('/:id', (request, response) => {
     queries.delete(request.params.id).then(() => {
         queries.list()
-        .then(company => response.json(company))
+        .then(company => response.json({company}))
     })
 })
 
