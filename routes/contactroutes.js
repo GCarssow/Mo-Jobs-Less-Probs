@@ -18,15 +18,26 @@ router.get("/:id", (request, response) => {
 
 router.delete('/:id', (request, response) => {
     queries.delete(request.params.id).then(() => {
-        response.json({
-            message: 'Entry Deleted'
-        })
-    })
+        queries.list()
+        .then(contact => response.json(contact))
+    }).catch(next)
 })
+
+// router.delete('/:id', (request, response) => {
+//     queries.delete(request.params.id).then(() => {
+//         response.json({
+//             message: 'Entry Deleted'
+//         })
+//     })
+// })
 
 router.post('/', (request, response, next) => {
     queries.create(request.body)
         .then(contact => response.json(contact[0]))
 })
+
+// router.put('/:id', (request, response) => {
+//     queries.update(request.params.id)
+// })
 
 module.exports = router;
