@@ -20,16 +20,8 @@ router.delete('/:id', (request, response) => {
     queries.delete(request.params.id).then(() => {
         queries.list()
         .then(contact => response.json(contact))
-    }).catch(next)
+    })
 })
-
-// router.delete('/:id', (request, response) => {
-//     queries.delete(request.params.id).then(() => {
-//         response.json({
-//             message: 'Entry Deleted'
-//         })
-//     })
-// })
 
 router.post('/', (request, response, next) => {
     queries.create(request.body)

@@ -20,7 +20,7 @@ router.delete('/:id', (request, response) => {
     queries.delete(request.params.id).then(() => {
         queries.list()
         .then(company => response.json(company))
-    }).catch(next)
+    })
 })
 
 router.post('/', (request, response, next) => {
