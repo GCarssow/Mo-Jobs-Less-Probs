@@ -31,9 +31,19 @@ router.post('/', (request, response, next) => {
 router.put('/:id', (request, response) => {
     queries.update(request.params.id, request.body)
         .then(contact => {
-            response.json({contact})
+            response.json({contact: contact[0]})
         })
         .catch(console.error)
 })
+
+// router.put("/:id", (request, response, next) => {
+//     queries.update(request.params.id, request.body)
+//     .then(resolution => {
+//         response.json({resolution: resolution[0]});
+//     }).catch(next);
+// });
+
+
+
 
 module.exports = router;
