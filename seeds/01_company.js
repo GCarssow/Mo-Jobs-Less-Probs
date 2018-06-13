@@ -1,5 +1,5 @@
 exports.seed = function(knex, Promise) {
-  return knex.raw('DELETE FROM "company_tb"; ALTER SEQUENCE company_tb_id_seq RESTART WITH 333;')
+  return knex.raw('DELETE FROM "company_tb"; ALTER SEQUENCE company_tb_id_seq RESTART WITH 33;')
     .then(function () {
       return knex('company_tb').insert([
         {
