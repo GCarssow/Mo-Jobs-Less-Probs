@@ -30,28 +30,12 @@ router.post('/', (request, response, next) => {
         // .then(contact => contact.json({contact: contact}))
 })
 
-// router.post("/", (request, response, next) => {
-//     queries.create(request.body).then(resolution => {
-//         response.status(201).json({resolution: resolution});
-//     }).catch(next);
-// });
-
-router.put('/:id', (request, response) => {
-    queries.update(request.params.id, request.body)
-        .then(contact => {
-            response.json({contact: contact[0]})
-        })
-        .catch(console.error)
-})
-
-// router.put("/:id", (request, response, next) => {
+// router.put('/:id', (request, response) => {
 //     queries.update(request.params.id, request.body)
-//     .then(resolution => {
-//         response.json({resolution: resolution[0]});
-//     }).catch(next);
-// });
-
-
-
+//         .then(contact => {
+//             response.json({contact: contact[0]})
+//         })
+//         .catch(console.error)
+// })
 
 module.exports = router;
