@@ -28,4 +28,12 @@ router.post('/', (request, response, next) => {
         .then(company => response.json(company[0]))
 })
 
+router.put('/:id', (request, response) => {
+    queries.update(request.params.id, request.body)
+        .then(company => {
+            response.json({company: company[0]})
+        })
+        .catch(console.error)
+})
+
 module.exports = router;

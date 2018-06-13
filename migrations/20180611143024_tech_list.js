@@ -6,12 +6,10 @@ exports.up = function(knex, Promise) {
         table.text('position')
         table.text('location_met')
         table.date('date_last_interacted')
-        table.integer('company_id').references('company_tb.id').onDelete('cascade')
-    }
-        )
-    }
+        table.integer('company_tb_id').references('company_tb.id').onDelete('cascade')
+    })
+}
 
 exports.down = function(knex, Promise) {
-    return knex.schema.dropTableIfExists('contact_tb')
-  
-};
+    return knex.schema.dropTableIfExists('contact_tb') 
+}

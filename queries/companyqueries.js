@@ -7,9 +7,9 @@ module.exports = {
     create(company) {
         return database("company_tb").insert(company,'*')
     },
-    // update(id, company) {
-    //     return database('company_tb').where('id', id).update(company, '*')
-    // },
+    update(id, company) {
+        return database('company_tb').where('id', id).update(company, '*').then(contact => contact[0])
+    },
     delete(id) {
         return database('company_tb').where('id', id).delete()
     },
