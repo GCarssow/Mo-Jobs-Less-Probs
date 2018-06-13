@@ -25,11 +25,15 @@ router.delete('/:id', (request, response) => {
 
 router.post('/', (request, response, next) => {
     queries.create(request.body)
-        .then(contact => response.json(contact[0]))
+        .then(contact => contact.json())
 })
 
-// router.put('/:id', (request, response) => {
-//     queries.update(request.params.id).then()
-// })
+router.put('/:id', (request, response) => {
+    queries.update(request.params.id, request.body)
+        .then(contact => {
+            response.json({contact})
+        })
+        .catch(console.error)
+})
 
 module.exports = router;
