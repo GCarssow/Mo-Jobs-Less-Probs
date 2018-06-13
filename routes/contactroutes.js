@@ -24,9 +24,17 @@ router.delete('/:id', (request, response) => {
 })
 
 router.post('/', (request, response, next) => {
-    queries.create(request.body)
-        .then(contact => contact.json())
+    queries.create(request.body).then(contact => {
+        response.status(201).json({contact: contact})
+    }).catch(next)
+        // .then(contact => contact.json({contact: contact}))
 })
+
+// router.post("/", (request, response, next) => {
+//     queries.create(request.body).then(resolution => {
+//         response.status(201).json({resolution: resolution});
+//     }).catch(next);
+// });
 
 router.put('/:id', (request, response) => {
     queries.update(request.params.id, request.body)

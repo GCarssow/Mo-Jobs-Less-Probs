@@ -5,7 +5,7 @@ module.exports = {
         return database("contact_tb")
     },
     create(contact) {
-        return database("contact_tb").insert(contact,'*')
+        return database("contact_tb").insert(contact,'*').then(contact => contact[0])
     },
     update(id, contact) {
         return database('contact_tb').where('id', id).update(contact, '*').then(record => record[0])
@@ -17,3 +17,11 @@ module.exports = {
         return database('contact_tb').where('id', id).first()
     }
 }
+
+
+// create(resolution) {
+//     return database("resolution")
+//         .insert(resolution)
+//         .returning("*")
+//         .then(record => record[0]);
+// },
