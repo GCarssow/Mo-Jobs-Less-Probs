@@ -5,7 +5,7 @@ module.exports = {
         return database("company_tb")
     },
     create(company) {
-        return database("company_tb").insert(company,'*')
+        return database("company_tb").insert(company,'*').then(record => record[0])
     },
     update(id, company) {
         return database('company_tb').where('id', id).update(company, '*').then(contact => contact[0])
