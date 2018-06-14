@@ -24,20 +24,14 @@ router.delete('/:id', (request, response) => {
 })
 
 router.post('/', (request, response, next) => {
-    console.log('server', request.body)
     queries.create(request.body)
     .then(()=> {
-        queries.list()
-        .then(company => {
-            // console.log('insidePSOT',company)
-            response.status(201).json({company});
-            // json({company});
-    })
-    }).catch(next);
+        queries.list().then(company => {
+            response.status(201).json({company})
+        })
+    }).catch(next)
 
 })
-
-
 
 router.put('/:id', (request, response) => {
     queries.update(request.params.id, request.body)

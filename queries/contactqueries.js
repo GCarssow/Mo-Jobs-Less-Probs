@@ -17,11 +17,3 @@ module.exports = {
         return database('contact_tb').where('id', id).first()
     }
 }
-
-
-// create(resolution) {
-//     return database("resolution")
-//         .insert(resolution)
-//         .returning("*")
-//         .then(record => record[0]);
-// },

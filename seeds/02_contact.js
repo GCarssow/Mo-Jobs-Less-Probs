@@ -28,19 +28,19 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 4,
-          name: 'Mark Zuck',
-          position: 'CEO',
-          location_met: 'Lizard Person Convention',
-          date_last_interacted: '06/10/2018',
-          company_tb_id: 4
-        },
-        {
-          id: 5,
           name: 'Janice Weatherspoon',
           position: 'HR Manager',
           location_met: 'Denver Devs Happy Hour',
           date_last_interacted: '06/13/2018',
           company_tb_id: 3
+        },
+        {
+          id: 5,
+          name: 'Mark Zuck',
+          position: 'CEO',
+          location_met: 'Lizard Person Convention',
+          date_last_interacted: '06/10/2018',
+          company_tb_id: 4
         }
       ])
     })

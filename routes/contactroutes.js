@@ -24,10 +24,12 @@ router.delete('/:id', (request, response) => {
 })
 
 router.post('/', (request, response, next) => {
-    queries.create(request.body).then(contact => {
-        response.status(201).json({contact: contact})
+    queries.create(request.body)
+    .then(() => {
+        queries.list().then(company => {
+            response.status(201).json({contact})
+        })
     }).catch(next)
-        // .then(contact => contact.json({contact: contact}))
 })
 
 router.put('/:id', (request, response) => {
