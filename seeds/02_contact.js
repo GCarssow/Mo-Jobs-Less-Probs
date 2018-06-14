@@ -12,7 +12,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           id:2,
-          name: 'James "The Mustache" Schulz',
+          name: 'James The Mustache Schulz',
           position: 'Brogrammer',
           location_met: 'Guys Who Code',
           date_last_interacted: '07/01/2018',
@@ -20,7 +20,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           id:3,
-          name: 'James "Biceps" Mann',
+          name: 'James Brains and Brawn Mann',
           position: 'Assistant to the Regional Manager',
           location_met: 'DBZ LARPing Meetup',
           date_last_interacted: '06/08/2018',
