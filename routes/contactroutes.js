@@ -26,7 +26,7 @@ router.delete('/:id', (request, response) => {
 router.post('/', (request, response, next) => {
     queries.create(request.body)
     .then(() => {
-        queries.list().then(company => {
+        queries.list().then(contact => {
             response.status(201).json({contact})
         })
     }).catch(next)
