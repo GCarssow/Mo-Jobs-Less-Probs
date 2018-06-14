@@ -1,5 +1,5 @@
 exports.seed = function(knex, Promise) {
-  return knex.raw('DELETE FROM "contact_tb"; ALTER SEQUENCE contact_tb_id_seq RESTART WITH 25;')
+  return knex.raw('DELETE FROM "contact_tb"; ALTER SEQUENCE contact_tb_id_seq RESTART WITH 6;')
     .then(function () {
       return knex('contact_tb').insert([
         {
@@ -12,169 +12,35 @@ exports.seed = function(knex, Promise) {
         },
         {
           id:2,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
+          name: 'James "The Mustache" Schulz',
+          position: 'Brogrammer',
+          location_met: 'Guys Who Code',
+          date_last_interacted: '07/01/2018',
+          company_tb_id: 2
         },
         {
           id:3,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
+          name: 'James "Biceps" Mann',
+          position: 'Assistant to the Regional Manager',
+          location_met: 'DBZ LARPing Meetup',
+          date_last_interacted: '06/08/2018',
           company_tb_id: 2
         },
         {
           id: 4,
-          name: 'Adrian',
+          name: 'Mark Zuck',
           position: 'CEO',
-          location_met: 'the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
+          location_met: 'Lizard Person Convention',
+          date_last_interacted: '06/10/2018',
+          company_tb_id: 4
+        },
+        {
           id: 5,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 6,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 2
-        },
-        {
-          id: 7,
-          name: 'Adrian',
-          position: 'CEO',
-          location_met: 'the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 8,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 9,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 2
-        }, {
-          id: 10,
-          name: 'Adrian',
-          position: 'CEO',
-          location_met: 'the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 11,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 12,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 2
-        },
-        {
-          id: 13,
-          name: 'Adrian',
-          position: 'CEO',
-          location_met: 'the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 14,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 15,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 2
-        }, {
-          id: 16,
-          name: 'Adrian',
-          position: 'CEO',
-          location_met: 'the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 17,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 18,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 2
-        }, {
-          id: 19,
-          name: 'Adrian',
-          position: 'CEO',
-          location_met: 'the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 20,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 21,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 2
-        }, {
-          id: 22,
-          name: 'Adrian',
-          position: 'CEO',
-          location_met: 'the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 23,
-          name: 'Johnny Boy',
-          position: 'Mailman',
-          location_met: 'also the bar',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 1
-        }, {
-          id: 24,
-          name: 'James aka the Crusher',
-          position: 'Associate Instructor',
-          location_met: 'At a dance party',
-          date_last_interacted: '06/01/2018',
-          company_tb_id: 2
+          name: 'Janice Weatherspoon',
+          position: 'HR Manager',
+          location_met: 'Denver Devs Happy Hour',
+          date_last_interacted: '06/13/2018',
+          company_tb_id: 3
         }
       ])
     })
