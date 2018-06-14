@@ -13,7 +13,7 @@ router.get("/", (request, response, next) => {
 
 router.get("/:id", (request, response) => {
     queries.read(request.params.id)
-        .then(contact => response.json(contact))
+        .then(contact => response.json({contact}))
 })
 
 router.delete('/:id', (request, response) => {
