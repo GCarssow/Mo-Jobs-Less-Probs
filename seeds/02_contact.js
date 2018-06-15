@@ -13,8 +13,8 @@ exports.seed = function(knex, Promise) {
         {
           id:2,
           name: 'James The Mustache Schulz',
-          position: 'Brogrammer',
-          location_met: 'Guys Who Code',
+          position: 'Instructor',
+          location_met: 'Denver Devs',
           date_last_interacted: '07/01/2018',
           company_tb_id: 2
         },
